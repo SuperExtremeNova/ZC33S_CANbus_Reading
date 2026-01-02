@@ -12,7 +12,7 @@ const char* versionUrl = "https://github.com/SuperExtremeNova/ZC33S_CANbus_Readi
 const char* firmwareUrl = "https://github.com/SuperExtremeNova/ZC33S_CANbus_Reading/releases/download/v0.0.1/firmware.bin";
 
 //Current firmware version control
-const char* currentFirmwareVersion = "0.0.1";
+const char* currentFirmwareVersion = "0.0.2"; // verson moved to .2 for testing perposes
 const unsigned long unpdateCheckInterval = 5 * 60 * 1000; //calculation for 5 minutes in milliseconds [change based on need]
 unsigned long lastUpdateCheck = 0;
 
