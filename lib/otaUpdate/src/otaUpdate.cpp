@@ -8,8 +8,8 @@ const char* ssid = "Digicel_WiFi_nvQ6";
 const char* password = "TA4UauCR";
 
 //URL for the firmware and the raw text file for the version number of the latest firmware
-const char* versionUrl = "";
-const char* firmwareUrl = "";
+const char* versionUrl = "https://github.com/SuperExtremeNova/ZC33S_CANbus_Reading/blob/main/lib/otaUpdate/version.txt";
+const char* firmwareUrl = "https://github.com/SuperExtremeNova/ZC33S_CANbus_Reading/releases/download/v0.0.1/firmware.bin";
 
 //Current firmware version control
 const char* currentFirmwareVersion = "0.0.1";
