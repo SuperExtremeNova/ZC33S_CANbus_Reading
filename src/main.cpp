@@ -23,7 +23,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  //Serial.println(currentFirmwareVersion);
+  Serial.println(currentFirmwareVersion);
 }
 
 // put function definitions here:
