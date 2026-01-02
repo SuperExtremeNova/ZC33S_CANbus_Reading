@@ -8,11 +8,11 @@ const char* ssid = "Digicel_WiFi_nvQ6";
 const char* password = "TA4UauCR";
 
 //URL for the firmware and the raw text file for the version number of the latest firmware
-const char* versionUrl = "https://github.com/SuperExtremeNova/ZC33S_CANbus_Reading/blob/main/lib/otaUpdate/version.txt";
+const char* versionUrl = "https://raw.githubusercontent.com/SuperExtremeNova/ZC33S_CANbus_Reading/main/lib/otaUpdate/version.txt";
 const char* firmwareUrl = "https://github.com/SuperExtremeNova/ZC33S_CANbus_Reading/releases/download/v0.0.1/firmware.bin";
 
 //Current firmware version control
-const char* currentFirmwareVersion = "0.0.2"; // verson moved to .2 for testing perposes
+const char* currentFirmwareVersion = "0.0.1"; // verson moved to .2 for testing perposes
 const unsigned long unpdateCheckInterval = 5 * 60 * 1000; //calculation for 5 minutes in milliseconds [change based on need]
 unsigned long lastUpdateCheck = 0;
 
@@ -54,8 +54,13 @@ void checkForFirmwareUpdate() {
 }
 
 String fetchLatestVersion() {
+
+  //adding code for setting a secure client to test why the http protocal is failing
+  WiFiClientSecure client;
+  client.setInsecure(); //for testing purposes
+
   HTTPClient http;
-  http.begin(versionUrl);
+  http.begin(client, versionUrl); //updates made to the call function [begin] to capture the client
 
   int httpCode = http.GET();
   if (httpCode == HTTP_CODE_OK) {

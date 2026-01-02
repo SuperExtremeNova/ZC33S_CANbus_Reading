@@ -11,18 +11,19 @@ void setup() {
   delay(1000);
 
   // connection of the WiFi and checking for update from the GitHub
-  Serial.println("System initiallizing...");
+  Serial.println("System initiallizing...OTA Updated");
   connectToWiFi();
   Serial.println("Device is ready.");
   Serial.println("Current Firmware Version: " + String(currentFirmwareVersion));
   checkForFirmwareUpdate();
 
-  
+
 
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+  //Serial.println(currentFirmwareVersion);
 }
 
 // put function definitions here:
