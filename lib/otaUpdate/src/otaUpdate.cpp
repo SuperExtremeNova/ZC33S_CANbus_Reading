@@ -12,9 +12,11 @@ const char* versionUrl = "https://raw.githubusercontent.com/SuperExtremeNova/ZC3
 const char* firmwareUrl = "https://github.com/SuperExtremeNova/ZC33S_CANbus_Reading/releases/download/v0.0.1/firmware.bin";
 
 //Current firmware version control
-const char* currentFirmwareVersion = "0.0.2";
-const unsigned long unpdateCheckInterval = 5 * 60 * 1000; //calculation for 5 minutes in milliseconds [change based on need]
+const char* currentFirmwareVersion = "0.0.4";
+const unsigned long updateCheckInterval = 5 * 60 * 1000; //calculation for 5 minutes in milliseconds [change based on need]
+unsigned long previous = 0;
 unsigned long lastUpdateCheck = 0;
+
 
 void connectToWiFi() {
   Serial.print("Connecting to WiFi");

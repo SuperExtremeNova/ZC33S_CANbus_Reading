@@ -5,6 +5,8 @@
 #include <Update.h>
 
 extern const char* currentFirmwareVersion;
+extern unsigned long previous;
+extern const unsigned long updateCheckInterval;
 
 // put function declarations here:
 int myFunction(int, int);

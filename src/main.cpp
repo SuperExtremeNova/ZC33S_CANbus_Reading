@@ -24,6 +24,12 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   Serial.println(currentFirmwareVersion);
+
+  if ((millis() - previous) >= updateCheckInterval) {
+    previous = millis();
+    checkForFirmwareUpdate;
+    Serial.println("Checked for Firmware update...Loop");
+  }
 }
 
 // put function definitions here:
